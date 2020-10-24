@@ -11,6 +11,7 @@ $(function() {
                 {data: 'DT_RowIndex', name: 'DT_RowIndex'},
                 {data: 'name', name: 'name'},
                 {data: 'email', name: 'email'},
+                {data: 'id', name: 'id'},
                 {data: 'action', name: 'action', orderable: false, searchable: false,
                 render: function( data, _type, _full ) {
                             let btn;
