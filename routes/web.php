@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserUIController;
+use App\Http\Controllers\UserApiEndpointController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('users', UserUIController::class);
+Route::resource('users-api', UserApiEndpointController::class);

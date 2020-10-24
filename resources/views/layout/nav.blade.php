@@ -6,11 +6,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Datatables <span class="sr-only">(current)</span></a>
+            {{ $seg = Request::segment(1) }}
+            <li class="nav-item {{$seg == 'users' ? 'active':''}}">
+                <a class="nav-link" href="{{route('users.index')}}">Datatables</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Api </a>
+            <li class="nav-item {{$seg == 'users-api' ? 'active':''}}">
+                <a class="nav-link" href="{{route('users-api.index')}}">Api </a>
             </li>
             </ul>
         </div>
