@@ -11,7 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.styles([
+    'public/assets/bootstrap.min.css',
+    'public/assets/dataTables.bootstrap4.min.css',
+], 'public/css/all.css');
+
+mix.scripts([
+    'public/assets/jquery-3.5.1.min.js',
+    'public/assets/bootstrap.min.js',
+    'public/assets/jquery.dataTables.min.js',
+    'public/assets/dataTables.bootstrap4.min.js'
+], 'public/js/all.js')
